@@ -7,9 +7,9 @@ spring:
       max-file-size: 10MB
       max-request-size: 30MB
   datasource:
-    url: jdbc:log4jdbc:mysql://13.124.245.134:3306/JUVIS2?zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8&serverTimezone=UTC
-    username: juvis
-    password: wbqltmroqkfdb!2
+    url: jdbc:log4jdbc:mysql://127.0.0.1:3306/JUVIS2?zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: Eksrl123@
     hikari:
       maximum-pool-size: 10
       minimum-idle: 2
