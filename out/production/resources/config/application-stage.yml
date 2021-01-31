@@ -1,0 +1,66 @@
+spring:
+  profiles: local
+  application:
+    name: juvis-mall-web
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 30MB
+  datasource:
+    url: jdbc:log4jdbc:mysql://13.124.245.134:3306/JUVIS2?zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8&serverTimezone=UTC
+    username: juvis
+    password: wbqltmroqkfdb!2
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+  http:
+    log-request-details: true
+  mvc:
+    view:
+      prefix: /WEB-INF/view/
+      suffix: .jsp
+    static-path-pattern: /assets/**
+  resources:
+    static-locations: /assets/
+    add-mappings: true
+logging.file: d:/home/ssan/juvis_app.log
+logging:
+  level:
+    root: info
+    mysql: error
+    mybatis: error
+    web: error
+    com.zaxxer.hikari: error
+    com.zaxxer.hikari.HikariConfig: error
+    jdbc:
+      sqlonly: info
+      sqltiming: error
+      audit: warn
+      resultset: error
+      resultsettable: error
+      connection: error
+    kr.co.bomb.sample: info
+  pattern:
+    console: "%d [%-5level] %-30logger{30}.%M : %msg%n"
+    file: "%d [%-5level] %-30logger{30}.%M : %msg%n"
+  file:
+    max-size: 500MB
+    max-history: 50
+mybatis:
+  configuration:
+    cache-enabled: false
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:sql/**/*.xml
+  type-aliases-package: kr.co.bomb.sample
+server:
+  port: 8888
+---
+juvis:
+  mall:
+    prop:
+      join:
+        pc-url: http://stg.juvisdev.co.kr/member/step01.do
+        mobile-url: http://stg-members.juvisdev.co.kr/member/join_step1.php
+
+

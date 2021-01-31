@@ -1,0 +1,6 @@
+@charset "utf-8";
+
+#header .logo {width:190px; margin-left:-95px; position:absolute; left:50%; top:50px;}
+.shoplist {padding-top:0;}
+#footer .footer_inner {box-sizing:border-box;width: 1120px;height: 188px;margin: 0 auto;padding: 44px 0 0 190px;position: relative;}
+#footer address {position: absolute;left: 188px;top: 74px;font-size: 13px;color: #808080;line-height: 1.8;}

@@ -1,0 +1,17 @@
+spring:
+  profiles:
+    active : local
+---
+juvis:
+  mall:
+    prop:
+      token:
+        key: Bomb_secret_key
+        expire-time: 604800
+      auth:
+        login-page-url: /login/view
+        login-process-url: /login
+        logout-url: /logout
+        user-name-param: memId
+        password-param: memPw
+        remember-me-param: remember-me

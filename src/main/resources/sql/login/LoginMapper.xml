@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.co.bomb.sample.biz.login.mapper.LoginMapper">
+
+    <resultMap id="authUserVOMap" type="authUserVO">
+        <result column="idx" property="memIdx"></result>
+        <result column="mem_id" property="memId"></result>
+        <result column="mem_pwd" property="memPw"></result>
+        <result column="mem_name" property="memName"></result>
+        <result column="mem_sms" property="memSms"></result>
+        <result column="mem_smsYN" property="memSmsYn"></result>
+        <result column="mem_email" property="memEmail"></result>
+        <result column="mem_emailYN" property="memEmailYn"></result>
+        <result column="mem_zipCode" property="memZipCode"></result>
+        <result column="mem_addr1" property="memAddr1"></result>
+        <result column="mem_addr2" property="memAddr2"></result>
+        <result column="mem_sex" property="memSex"></result>
+    </resultMap>
+
+    <resultMap id="authTokenVOMap" type="authTokenVO">
+        <result column="mem_id" property="memId"></result>
+        <result column="series" property="memSeries"></result>
+        <result column="token" property="memToken"></result>
+        <result column="last_date" property="lastDate"></result>
+    </resultMap>
+
+
+    <insert id="insertLoginToken"  parameterType="authTokenVO">
+        INSERT INTO AUTH_TOKEN
+        ( MEM_ID ,  SERIES  ,  TOKEN ,  LAST_DATE)
+        VALUE
+        (#{memId}, #{memSeries}, #{memToken}, #{lastDate})
+    </insert>
+
+    <update id="updateLoginToken" parameterType="authTokenVO">
+        UPDATE AUTH_TOKEN
+        SET    LAST_DATE = #{lastDate}, TOKEN = #{memToken}
+        WHERE  SERIES = #{memSeries}
+    </update>
+
+    <delete id="deleteLoginToken" parameterType="string" >
+        DELETE
+        FROM   AUTH_TOKEN
+        WHERE  MEM_ID = #{memId}
+    </delete>
+
+    <select id="selectAuthToken" parameterType="string" resultMap="authTokenVOMap">
+        SELECT MEM_ID,
+               TOKEN,
+               LAST_DATE
+        FROM   AUTH_TOKEN
+        WHERE  SERIES = #{seriesId}
+    </select>
+
+
+    <select id="selectAuthUser" parameterType="authUserVO" resultMap="authUserVOMap">
+        SELECT
+				A.IDX,
+                A.MEM_ID,
+                A.MEM_PWD,
+                A.MEM_NAME,
+                A.MEM_SMS,
+                A.MEM_EMAIL,
+                A.MEM_EMAIL_YN,
+                A.MEM_SMS_YN,
+		FROM	MEMBER A
+		WHERE	A.MEM_ID = #{memId}
+		<if test="memPw != null">
+        AND     A.MEM_PWD = PASSWORD(#{memPw})
+        </if>
+		AND     A.MEM_DROP_YN = 'N'
+    </select>
+
+
+
+
+
+
+</mapper>
