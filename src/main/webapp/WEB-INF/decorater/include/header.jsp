@@ -1,46 +1,54 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 
-<ul class="skip_navi">
-    <li><a href="#container">본문 바로가기</a></li>
-    <li><a href="#gnb">주메뉴 바로가기</a></li>
-</ul>
-<!-- header -->
 
-<div id="header" class="header">
-    <header>
-        <h1 class="logo"><a href="/"><img src="<c:url value='/assets/images/common/logo_2019.jpg'/>" alt="JOINBY"></a></h1>
-        <!-- header_util -->
-        <div class="header_util">
-            <!-- 로그아웃 상태 -->
-            <sec:authorize access="!isAuthenticated()">
-                <a href="/">HOME</a>
-                <a href='<spring:eval expression="@properties.getProperty(\'juvis.mall.prop.auth.login-page-url\')"></spring:eval>'>로그인</a>
-                <a href="javascript: void(0);" id="btn_join_set"  class="btn_join_set" onclick="JUVISMALL.joinPath();">회원가입</a>
-                <a href="javascript: void(0);">장바구니</a>
-                <a href="javascript: void(0);">공지사항</a>
-            </sec:authorize>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">BOMB</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-            <!-- 로그인 상태 -->
-            <sec:authorize access="isAuthenticated()">
-                <span class="login_msg">쥬비스 통합 멤버스로 로그인 중입니다.</span>
-                <a href='<spring:eval expression="@properties.getProperty(\'juvis.mall.prop.auth.logout-url\')"></spring:eval>'>로그아웃</a>
-                <a href="javascript: void(0);">마이페이지</a>
-                <a href="javascript: void(0);">장바구니</a>
-                <a href="javascript: void(0);">공지사항</a>
-            </sec:authorize>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link loginBtn"  href="#">Home
+                    <sec:authorize access="!isAuthenticated()">
+                         - 비로그인
+                    </sec:authorize>
+                    <sec:authorize access="isAuthenticated()">
+                         - 로그인
+                    </sec:authorize>
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">메뉴바</a>
+            </li>
+
+            <!--
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Separated link</a>
+                </div>
+            </li>
+            -->
+        </ul>
+        <!--
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+        </form>
+        -->
+    </div>
+</nav>
 
 
-        </div>
-        <!--// header_util -->
-        <!-- gnb -->
-        <nav>
-            <div id="gnb" class="gnb">
-                <ul>
-                    <li><a href="#">1</a></li>
-                </ul>
-            </div>
-        </nav>
-        <!--// gnb -->
-    </header>
-</div>
+
+
+
+

@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kr.co.bomb.sample.juvis-mall-web.iml" filepath="$PROJECT_DIR$/.idea/modules/kr.co.bomb.sample.juvis-mall-web.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kr.co.bomb.sample.juvis-mall-web.main.iml" filepath="$PROJECT_DIR$/.idea/modules/kr.co.bomb.sample.juvis-mall-web.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kr.co.bomb.sample.juvis-mall-web.test.iml" filepath="$PROJECT_DIR$/.idea/modules/kr.co.bomb.sample.juvis-mall-web.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kr.co.bomb.sample.bomb_springbootSample.iml" filepath="$PROJECT_DIR$/.idea/modules/kr.co.bomb.sample.bomb_springbootSample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kr.co.bomb.sample.bomb_springbootSample.main.iml" filepath="$PROJECT_DIR$/.idea/modules/kr.co.bomb.sample.bomb_springbootSample.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/kr.co.bomb.sample.bomb_springbootSample.test.iml" filepath="$PROJECT_DIR$/.idea/modules/kr.co.bomb.sample.bomb_springbootSample.test.iml" />
     </modules>
   </component>
 </project>

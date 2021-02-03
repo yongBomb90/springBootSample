@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="Gradle : kr.co.bomb.sample : juvis-mall-web-0.0.1-SNAPSHOT.war (exploded)">
-    <output-path>$PROJECT_DIR$/build/libs/exploded/juvis-mall-web-0.0.1-SNAPSHOT.war</output-path>
+  <artifact type="exploded-war" name="Gradle : kr.co.bomb.sample : bomb_springbootSample-0.0.1-SNAPSHOT.war (exploded)">
+    <output-path>$PROJECT_DIR$/build/libs/exploded/bomb_springbootSample-0.0.1-SNAPSHOT.war</output-path>
     <properties id="gradle-properties">
       <options external-project-path="$PROJECT_DIR$">
         <manifest>TWFuaWZlc3QtVmVyc2lvbjogMS4wDQoNCg==</manifest>
@@ -8,12 +8,12 @@
     </properties>
     <root id="root">
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/build/libs/exploded/juvis-mall-web-0.0.1-SNAPSHOT.war/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/build/libs/exploded/bomb_springbootSample-0.0.1-SNAPSHOT.war/META-INF/MANIFEST.MF" />
       </element>
-      <element id="javaee-facet-resources" facet="kr.co.bomb.sample.juvis-mall-web.main/web/Web Gradle : juvis-mall-web-0.0.1-SNAPSHOT.war" />
+      <element id="javaee-facet-resources" facet="kr.co.bomb.sample.bomb_springbootSample.main/web/Web Gradle : bomb_springbootSample-0.0.1-SNAPSHOT.war" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="kr.co.bomb.sample.juvis-mall-web.main" />
+          <element id="module-output" name="kr.co.bomb.sample.bomb_springbootSample.main" />
           <element id="dir-copy" path="$PROJECT_DIR$/out/production/resources" />
         </element>
         <element id="directory" name="lib">
