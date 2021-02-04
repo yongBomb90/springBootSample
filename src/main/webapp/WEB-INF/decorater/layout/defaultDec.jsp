@@ -41,8 +41,12 @@
         <!--//Content-->
     </div>
 
+    <%@ include file="/WEB-INF/decorater/include/modal.jsp" %>
+
     <div class="container" >
         <%@ include file="/WEB-INF/decorater/include/footer.jsp" %>
     </div>
+
+
 </body>
 

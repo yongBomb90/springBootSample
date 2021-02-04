@@ -66,8 +66,9 @@ public class AuthConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
          http
             .authorizeRequests()
-                .mvcMatchers("/","/login/**","/product/**",loginPageUrl,loginProcessUrl,logOutUrl).permitAll()
-                .mvcMatchers("/**").hasRole("USER")
+                //.mvcMatchers("/","/assets/*/**","/login/**","/product/**",loginPageUrl,loginProcessUrl,logOutUrl).permitAll()
+                //.mvcMatchers("/**").hasRole("USER")
+                 .mvcMatchers("/**").permitAll()
             .and()
             .userDetailsService(bombUserDetailService)
             .authenticationProvider(authProvider)
