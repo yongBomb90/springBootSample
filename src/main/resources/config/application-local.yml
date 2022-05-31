@@ -8,9 +8,9 @@ spring:
       max-request-size: 30MB
       enabled: true
   datasource:
-    url: jdbc:log4jdbc:mysql://3.138.187.233:3306/BOMB?zeroDateTimeBehavior=convertToNull&characterEncoding=UTF-8&serverTimezone=UTC
-    username: bomb
-    password: Docsuli@90
+    url: jdbc:log4jdbc:mysql://ec2-3-34-49-25.ap-northeast-2.compute.amazonaws.com/MTBX
+    username: mtbx
+    password: qwer1234
     hikari:
       maximum-pool-size: 10
       minimum-idle: 2
