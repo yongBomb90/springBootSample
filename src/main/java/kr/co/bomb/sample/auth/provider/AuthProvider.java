@@ -13,7 +13,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
-
+//성공시 로직처리
 @Component("authProvider")
 public class AuthProvider implements AuthenticationProvider {
 
